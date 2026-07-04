@@ -22,13 +22,7 @@ st.set_page_config(
 st.title("📚 Multi PDF Chatbot")
 
 # API key input
-api_key = st.text_input(
-    "Enter Gemini API Key",
-    type="password"
-)
-
-if api_key:
-    os.environ["GOOGLE_API_KEY"] = api_key
+os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
 
 # Upload PDFs
 uploaded_files = st.file_uploader(
@@ -73,9 +67,8 @@ if uploaded_files and api_key:
 
     # Embeddings
     embeddings = GoogleGenerativeAIEmbeddings(
-        model="models/embedding-001"
+        model="models/embedding-004"
     )
-
     # Vector DB
     vectorstore = Chroma.from_documents(
         chunks,
