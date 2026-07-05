@@ -66,9 +66,9 @@ if uploaded_files:
     chunks = splitter.split_documents(documents)
 
     # Embeddings
-    embeddings = GoogleGenerativeAIEmbeddings(
-        model="models/text-embedding-004"
-    )
+   embeddings = GoogleGenerativeAIEmbeddings(
+    model="models/gemini-embedding-001"
+)
     # Vector DB
     vectorstore = Chroma.from_documents(
         chunks,
