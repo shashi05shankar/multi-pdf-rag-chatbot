@@ -59,7 +59,7 @@ if uploaded_files:
 
     # Split documents
     splitter = RecursiveCharacterTextSplitter(
-        chunk_size=1000,
+        chunk_size=2500,
         chunk_overlap=200
     )
 
