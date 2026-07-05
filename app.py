@@ -32,7 +32,7 @@ uploaded_files = st.file_uploader(
 )
 
 # Process PDFs
-if uploaded_files and api_key:
+if uploaded_files:
 
     documents = []
 
