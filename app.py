@@ -67,7 +67,7 @@ if uploaded_files:
 
     # Embeddings
     embeddings = GoogleGenerativeAIEmbeddings(
-        model="models/text-embedding-004""
+        model="models/text-embedding-004"
     )
     # Vector DB
     vectorstore = Chroma.from_documents(
