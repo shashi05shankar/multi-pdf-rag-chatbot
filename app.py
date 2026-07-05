@@ -66,7 +66,7 @@ if uploaded_files:
     chunks = splitter.split_documents(documents)
 
     # Embeddings
-   embeddings = GoogleGenerativeAIEmbeddings(
+    embeddings = GoogleGenerativeAIEmbeddings(
     model="models/gemini-embedding-001"
 )
     # Vector DB
